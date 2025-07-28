@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TableLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="0,1,2"
+    tools:context=".MainActivity">
+
+    <TableRow
+        android:id="@+id/tableRow1">
+        <TextView
+            android:id="@+id/textView1"
+            android:text="Giải phương trình bậc 2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="3"
+            android:background="#007D00"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/white"/>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2">
+        <TextView
+            android:id="@+id/textView2"
+            android:text="Nhập a:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#8DC58D"/>
+        <EditText
+            android:id="@+id/edita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:layout_span="2"/>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3">
+        <TextView
+            android:id="@+id/textView3"
+            android:text="Nhập b:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#8DC58D"/>
+        <EditText
+            android:id="@+id/editb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:layout_span="2"/>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4">
+        <TextView
+            android:id="@+id/textView4"
+            android:text="Nhập c:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#8DC58D"/>
+        <EditText
+            android:id="@+id/editc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:layout_span="2"/>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow5">
+        <Button
+            android:id="@+id/btntieptuc"
+            android:text="Tiếp tục"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#AAAAAA"
+            android:textColor="@color/black"
+            app:cornerRadius="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            />
+        <Button
+            android:id="@+id/btngiaipt"
+            android:text="Giải PT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#AAAAAA"
+            android:textColor="@color/black"
+            app:cornerRadius="0dp"
+            android:layout_marginRight="5dp"/>
+        <Button
+            android:id="@+id/btnthoat"
+            android:text="Thoát"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#AAAAAA"
+            android:textColor="@color/black"
+            app:cornerRadius="0dp"
+            android:layout_marginRight="5dp"/>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow6">
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="3"
+            android:background="#007D00"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+    </TableRow>
+</TableLayout>
