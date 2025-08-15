@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         lv = findViewById(R.id.lv);
         mylist = new ArrayList<>();
-        
+
         for (int i = 0; i < namePhone.length; i++) {
             mylist.add(new phone(namePhone[i], imagePhone[i], pricePhone[i]));
         }
