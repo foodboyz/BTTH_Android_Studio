@@ -2,13 +2,17 @@ package com.example.bai13_1_customlayout;
 
 public class phone {
     private String namePhone;
-    private String imagePhone;
+    private int imagePhone;
+    private String pricePhone;
 
-    public phone(String namePhone, String imagePhone) {
+
+    public phone(String namePhone, int imagePhone, String pricePhone) {
         this.namePhone = namePhone;
         this.imagePhone = imagePhone;
+        this.pricePhone = pricePhone;
     }
 
+    // Getters and Setters
     public String getNamePhone() {
         return namePhone;
     }
@@ -17,11 +21,19 @@ public class phone {
         this.namePhone = namePhone;
     }
 
-    public String getImagePhone() {
+    public int getImagePhone() {
         return imagePhone;
     }
 
-    public void setImagePhone(String imagePhone) {
+    public void setImagePhone(int imagePhone) {
         this.imagePhone = imagePhone;
+    }
+
+    public String getPricePhone() {
+        return pricePhone;
+    }
+
+    public void setPricePhone(String pricePhone) {
+        this.pricePhone = pricePhone;
     }
 }

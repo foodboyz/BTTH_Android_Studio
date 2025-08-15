@@ -3,24 +3,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
     android:gravity="center_vertical"
-    android:padding="16dp">
-    <ImageView
-    android:id="@+id/imgphone"
-    android:layout_width="80dp"
-    android:layout_height="80dp"
-    android:layout_marginEnd="16dp"
-    android:src="@drawable/cellphone"
- />
+    android:orientation="horizontal"
+    android:padding="10dp">
 
-    <TextView
-        android:id="@+id/txtnamephone"
+    <ImageView
+        android:id="@+id/imgphone"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ip" />
+
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_weight="1"
-        android:textSize="18sp"
-        android:textColor="@android:color/black"
-        tools:text="iPhone 15 Pro Max" />
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtnamephone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Điện thoại Sky" />
+
+        <TextView
+            android:id="@+id/txtpricephone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="#d32f2f"
+            android:textSize="16sp"
+            tools:text="Giá bán: 5,000,000" />
+
+    </LinearLayout>
 
 </LinearLayout>

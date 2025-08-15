@@ -1,5 +1,6 @@
 package com.example.bai13_1_customlayout;
 
+
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,11 +31,17 @@ public class MyArrayAdapter extends ArrayAdapter<phone> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
         convertView = inflater.inflate(idlayout, null);
+
         phone myPhone = mylist.get(position);
+
         ImageView imgPhone = convertView.findViewById(R.id.imgphone);
         TextView txtNamePhone = convertView.findViewById(R.id.txtnamephone);
-        imgPhone.setImageResource(Integer.parseInt(myPhone.getImagePhone()));
+        TextView txtPricePhone = convertView.findViewById(R.id.txtpricephone);
+
+        imgPhone.setImageResource(myPhone.getImagePhone());
         txtNamePhone.setText(myPhone.getNamePhone());
+        txtPricePhone.setText("Giá bán: " + myPhone.getPricePhone());
+
         return convertView;
     }
 }
