@@ -72,10 +72,9 @@ public class MainActivity extends AppCompatActivity {
                 lichsu = "";
                 txtlichsu.setText(lichsu);
 
-                // Cũng xóa lịch sử trong SharedPreferences ngay lập tức
                 SharedPreferences myprefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
                 SharedPreferences.Editor editor = myprefs.edit();
-                editor.remove(HISTORY_KEY); // Hoặc editor.putString(HISTORY_KEY, "");
+                editor.remove(HISTORY_KEY);
                 editor.apply();
             }
         });
@@ -88,10 +87,8 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences myprefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
         SharedPreferences.Editor editor = myprefs.edit();
 
-        // Lưu chuỗi lịch sử hiện tại vào SharedPreferences
         editor.putString(HISTORY_KEY, lichsu);
 
-        // Xác nhận lưu
         editor.apply(); // apply() tốt hơn commit() vì nó chạy bất đồng bộ
     }
 }

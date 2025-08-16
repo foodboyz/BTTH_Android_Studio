@@ -26,14 +26,13 @@ public class MainActivity extends AppCompatActivity {
         addControls();
         addEvents();
 
-        // Tải dữ liệu mặc định cho tab đầu tiên khi ứng dụng khởi chạy
         loadDataForTab1();
     }
 
     private void addControls() {
         // Ánh xạ TabHost
         tabHost = findViewById(R.id.tabhost);
-        tabHost.setup(); // Phải có lệnh này trước khi thêm tab
+        tabHost.setup();
 
         // Tạo các tab
         TabHost.TabSpec tab1 = tabHost.newTabSpec("t1");
@@ -57,17 +56,14 @@ public class MainActivity extends AppCompatActivity {
         lv2 = findViewById(R.id.lv2);
         lv3 = findViewById(R.id.lv3);
 
-        // Khởi tạo các ArrayList
         list1 = new ArrayList<>();
         list2 = new ArrayList<>();
         list3 = new ArrayList<>();
 
-        // Khởi tạo các Adapter
         myarray1 = new MyArrayAdapter(MainActivity.this, R.layout.listitem, list1);
         myarray2 = new MyArrayAdapter(MainActivity.this, R.layout.listitem, list2);
         myarray3 = new MyArrayAdapter(MainActivity.this, R.layout.listitem, list3);
 
-        // Gán Adapter cho các ListView
         lv1.setAdapter(myarray1);
         lv2.setAdapter(myarray2);
         lv3.setAdapter(myarray3);
@@ -91,32 +87,29 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadDataForTab1() {
         list1.clear();
-        // Dữ liệu đúng theo ảnh mẫu
+
         list1.add(new Item("52300", "Em là ai Tôi là ai", 0));
-        list1.add(new Item("52600", "Bài ca đất Phương Nam", 0)); // Sửa lại tiêu đề và trạng thái
-        list1.add(new Item("52567", "Buồn của Anh", 1)); // Thêm bài hát này
+        list1.add(new Item("52600", "Bài ca đất Phương Nam", 0));
+        list1.add(new Item("52567", "Buồn của Anh", 1));
         myarray1.notifyDataSetChanged();
     }
 
-    // Nạp dữ liệu cho Tab 2
-    // Sửa lại hàm này
+
     private void loadDataForTab2() {
         list2.clear();
-        // Dữ liệu đúng theo ảnh mẫu
-        list2.add(new Item("57236", "Gởi em ở cuối sông hồng", 1)); // Sửa lại trạng thái
-        list2.add(new Item("51548", "Quê hương tuổi thơ tôi", 0)); // Sửa lại tiêu đề
-        list2.add(new Item("51748", "Em ơi", 1)); // Thêm bài hát này
+
+        list2.add(new Item("57236", "Gởi em ở cuối sông hồng", 1));
+        list2.add(new Item("51548", "Quê hương tuổi thơ tôi.", 0));
+        list2.add(new Item("51748", "Em ơi", 1));
         myarray2.notifyDataSetChanged();
     }
 
-    // Nạp dữ liệu cho Tab 3
-    // Sửa lại hàm này
+
     private void loadDataForTab3() {
         list3.clear();
-        // Dữ liệu đúng theo ảnh mẫu
         list3.add(new Item("57689", "Hát với dòng sông", 1));
         list3.add(new Item("58716", "Say tình _ Remix", 0));
-        list3.add(new Item("58916", "Người hãy quên em đi", 1)); // Thêm bài hát này
+        list3.add(new Item("58916", "Người hãy quên em đi", 1));
         myarray3.notifyDataSetChanged();
     }
 }

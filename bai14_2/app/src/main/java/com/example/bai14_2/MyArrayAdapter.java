@@ -46,11 +46,9 @@ public class MyArrayAdapter extends ArrayAdapter<Item> {
             btnlike.setImageResource(R.drawable.unlike);
         }
 
-        // --- THÊM PHẦN CODE NÀY ĐỂ NÚT LIKE CÓ THỂ BẤM ĐƯỢC ---
         btnlike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Đảo ngược trạng thái thích (từ 1 thành 0, và từ 0 thành 1)
                 if (myItem.getThich() == 1) {
                     myItem.setThich(0);
                     btnlike.setImageResource(R.drawable.unlike);
